@@ -27,10 +27,16 @@ fun DataApp(
         ){
             composable(route = Navigasi.Formulir.name) {
                 FormIsian(
-                    //pilihanJk= JenisK.map {id ->
-                    konteks.resource.getString(id)}
+                    //pilihanJk= JenisK.map {id -> konteks.resource.getString(id)},
+                    OnSubmitBtnClick = {
+                        navController.navigate(Navigasi.Detail.name)
+                    }
                 )
             }
-        }
+            composable(route = Navigasi.Detail.name) {
+                TampilData (
+                    onBackBtnClick = { cancelAndBackToFormulir(navController) }
+
+            }
     }
 }
