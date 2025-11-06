@@ -26,7 +26,10 @@ fun DataApp(
             modifier = Modifier.padding(isiRuang)
         ){
             composable(route = Navigasi.Formulir.name) {
-                FormIsian()
+                FormIsian(
+                    //pilihanJk= JenisK.map {id ->
+                    konteks.resource.getString(id)}
+                )
             }
         }
     }
