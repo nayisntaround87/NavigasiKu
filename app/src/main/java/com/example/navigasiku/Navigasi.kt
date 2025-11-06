@@ -25,6 +25,9 @@ fun DataApp(
 
             modifier = Modifier.padding(isiRuang)
         ){
-
+            composable(route = Navigasi.Formulir.name) {
+                FormIsian()
+            }
         }
+    }
 }
